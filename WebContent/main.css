@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+html { 
+  background: url(images/endeavour.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.headerdiv{
+	color: black;
+	background-color: white;
+}
+#nav{
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: #000000;
+    height:38px;
+}
+#nav ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0;
+	width: 100%;
+}
+#nav li{
+	margin: 0px;
+	display:
+}
+#nav li a {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #000000;
+  float: left
+}
+#nav li a:hover {
+  color: #FFFFFF;
+  background-color: #35af3b;
+}
