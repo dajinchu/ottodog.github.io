@@ -21,7 +21,7 @@
 	
 	<div class = "as-table-row">
 	<div class = "carddiv">
-		<p>This is a website.</p>
+		<p>I'm Da-Jin</p>
 	</div>
 	</div>
 	

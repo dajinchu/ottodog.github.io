@@ -1,13 +1,25 @@
 @CHARSET "ISO-8859-1";
 .welcome{
-    background: #A0D388;
+    background: #5D8649;
 }
 .me{
-	background: #EAD58B;
+	background: #866150;
 }
 .cs{
-	background: #8BEAE2;
+	background: #ADB0E7;
 }
 .stem{
-	background: #9F9EE0;
+	background: #F1D3AC;
+}
+.hum{
+	background: #A1E7D7;
+}
+.math{
+	background: #ECF1A8
+}
+.french{
+	background: #E7A1D5;
+}
+.physics{
+	background: #A0D388;
 }
