@@ -7,21 +7,13 @@
 	<title>Da-Jin</title>
 </head>
 <body >
-
 	<div class="as-table">
 	<div id=topbar>
-	<div id="nav">
-	<ul>
-  		<li><a href="default.asp">WELCOME</a></li>
-  		<li><a href="news.asp">ME</a></li>
-  		<li><a href="contact.asp">CS</a></li>
-  		<li><a href="about.asp">STEM</a></li>
-	</ul>
-	</div>
+		<?php include 'menu.php'; ?>
 	
-	<div class = "center">
-		<h1>Welcome</h1>
-	</div>
+		<div class = "center">
+			<h1>Welcome</h1>
+		</div>
 	</div>
 	
 	<div class = "as-table-row">
@@ -30,9 +22,6 @@
 	</div>
 	</div>
 	
-	<div class = "as-table-row">
-		<p>footer</p>
-	</div>
 	</div>
 	
 </body>
