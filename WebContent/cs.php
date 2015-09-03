@@ -7,13 +7,15 @@
 	<meta charset="ISO-8859-1">
 	<title>Da-Jin</title>
 </head>
-<body >
+<style>
+</style>
+<body>
 	<div class="as-table">
-	<div class="welcome">
+	<div class="cs">
 		<?php include 'menu.php'; ?>
 	
 		<div class = "center">
-			<h1>Welcome</h1>
+			<h1>CS</h1>
 		</div>
 	</div>
 	
@@ -24,6 +26,5 @@
 	</div>
 	
 	</div>
-	
 </body>
 </html>
