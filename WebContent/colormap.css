@@ -1,13 +1,13 @@
 @CHARSET "ISO-8859-1";
 .welcome{
-    background-color: #A0D388;
+    background: #A0D388;
 }
 .me{
-	background-color: #EAD58B;
+	background: #EAD58B;
 }
 .cs{
-	background-color: #8BEAE2;
+	background: #8BEAE2;
 }
 .stem{
-	background-color: #9F9EE0;
+	background: #9F9EE0;
 }

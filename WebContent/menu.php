@@ -1,8 +1,8 @@
-<div>
-	<ul id="nav">
-  		<li><a class = "welcome" href="index.php">WELCOME</a></li>
-  		<li><a class = "me" href="me.php">ME</a></li>
-  		<li><a class = "cs" href="cs.php">CS</a></li>
-  		<li><a class = "stem" href="stem.php">STEM</a></li>
-	</ul>
+<div id="paddingBlock">
+	<div id="nav">
+  		<div class = "tab welcome"> <a href="index.php">WELCOME</a></div>
+  		<div class = "tab me"> <a href="me.php">ME</a></div>
+  		<div class = "tab cs"> <a href="cs.php">CS</a></div>
+  		<div class = "tab stem"> <a href="stem.php">STEM</a></div>
+	</div>
 </div>
