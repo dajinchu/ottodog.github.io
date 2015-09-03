@@ -1,15 +1,26 @@
 @CHARSET "ISO-8859-1";
-html { 
+html, body { margin: 0; padding: 0; background-color: #EEEEEE} 
+#topbar {
     background-color: #A0D388;
 }
 body{
-	font-family: Veranda, Geneva, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
-
-.headerdiv{
+.carddiv{
 	color: black;
 	background-color: white;
+	max-width: 1000px;
+	margin: auto;
+	padding: 30px;
+	padding-bottom: 90%;
 }
+.center{
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	padding-bottom: 30px;
+}
+
 #nav{
     list-style: none;
     font-weight: bold;
@@ -40,5 +51,5 @@ body{
 }
 #nav li a:hover {
     color: #FFFFFF;
-    background-color: #35af3b;
+    text-decoration: underline;
 }
