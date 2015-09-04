@@ -1,9 +1,12 @@
 @CHARSET "ISO-8859-1";
 .welcome{
-    background: #5D8649;
+    background: #A0D388;
 }
 .me{
-	background: #866150;
+	background: #EADF8B;
+}
+.portfolio{
+	background: #8BEAC7;
 }
 .cs{
 	background: #ADB0E7;

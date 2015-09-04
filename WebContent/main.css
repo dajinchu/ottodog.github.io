@@ -3,6 +3,13 @@ html, body { margin: 0; padding: 0; height:100%;}
 body{
 	font-family: 'Open Sans', sans-serif;
 }
+a{
+	text-decoration: none;
+	font-weight:bold;
+	font-size:1.2em;
+	color: #FFFFFF;
+	display:block;
+}
 .center{
 	color: white;
 	text-align: center;
@@ -30,25 +37,48 @@ body{
 	border-width: 1px;
 	border-color: #DDDDDD;
 }
-#nav{
+.nav{
 	display: flex; 
-	margin-left: 10px;
-	margin-right: 10px;
 	align-items: stretch; 
 }
 .tab{
 	flex: 1;
 	text-align: center;
+	position: relative;
 }
-.tab a{
-	text-decoration: none;
-	font-weight:bold;
-	font-size:1.2em;
-	color: #FFFFFF;
-	display:block;
+.tab > a{
 	padding: 10px;
 }
-.tab a:hover{
-	color: #FFFFFF;
+.tab:hover > a{
 	text-decoration: underline;
+}
+
+#subject-container{
+	position: absolute;
+	display: flex; 
+	flex-flow: column wrap;
+	width: 100%;
+	visibility: hidden;
+	/*justify-content: space-around;
+	/*display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	-moz-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	width:100%;
+	-webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;*/
+}
+.tab:hover > #subject-container{
+	visibility: visible;
+}
+#subject-container > div {
+	padding: 5px;
 }
