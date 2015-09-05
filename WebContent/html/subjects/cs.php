@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="stylesheet" type="text/css" href="colormap.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<?php include $_SERVER[DOCUMENT_ROOT].'/html/head.php';?>
 	<meta charset="ISO-8859-1">
 	<title>Da-Jin</title>
 </head>
@@ -12,16 +10,16 @@
 <body>
 	<div class="as-table">
 	<div class="cs">
-		<?php include 'menu.php'; ?>
+		<?php include $_SERVER[DOCUMENT_ROOT].'/html/menu.php'; ?>
 	
 		<div class = "center">
-			<h1>CS</h1>
+			<h1>Computer Science</h1>
 		</div>
 	</div>
 	
 	<div class = "as-table-row">
 	<div class = "carddiv">
-		<p>This is a website.</p>
+		<p>This website is part of the CS project.</p>
 	</div>
 	</div>
 	

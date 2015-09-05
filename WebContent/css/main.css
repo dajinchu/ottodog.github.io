@@ -49,8 +49,11 @@ a{
 .tab > a{
 	padding: 10px;
 }
-.tab:hover > a{
+#subject-container div:hover, .tab:hover > a{
 	text-decoration: underline;
+}
+.tab:hover > #subject-container{
+	visibility: visible;
 }
 
 #subject-container{
@@ -76,9 +79,6 @@ a{
     -ms-flex-direction: column;
     flex-direction: column;*/
 }
-.tab:hover > #subject-container{
-	visibility: visible;
-}
-#subject-container > div {
-	padding: 5px;
+#subject-container > div > a{
+	padding: 7px;
 }

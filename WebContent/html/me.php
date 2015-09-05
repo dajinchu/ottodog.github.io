@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="stylesheet" type="text/css" href="colormap.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<?php include 'head.php';?>
 	<meta charset="ISO-8859-1">
 	<title>Da-Jin</title>
 </head>
@@ -15,7 +13,7 @@
 		<?php include 'menu.php'; ?>
 	
 		<div class = "center">
-			<h1>ME</h1>
+			<h1>Dj CHU</h1>
 		</div>
 	</div>
 	
