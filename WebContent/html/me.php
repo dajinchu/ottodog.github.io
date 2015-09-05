@@ -13,13 +13,18 @@
 		<?php include 'menu.php'; ?>
 	
 		<div class = "center">
-			<h1>Dj CHU</h1>
+			<h1>dj chu</h1>
 		</div>
 	</div>
 	
 	<div class = "as-table-row">
 	<div class = "carddiv">
-		<p>I'm Da-Jin</p>
+		<!--<p>
+		My name ain't Da-Jin<br>
+		You're just imagining<br>
+		It's dj chu<br>
+		And I'd love to meet you<br>
+		</p>-->
 	</div>
 	</div>
 	
