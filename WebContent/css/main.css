@@ -12,33 +12,32 @@ a{
 }
 .center{
 	color: white;
-	text-align: center;
 	font-size: 1.5em;
 	height: 200px;
-	position: relative
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-h1{
-	align-self: center;
-}
-.as-table {
-    display: table;
+#top-level-div {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
+	position: relative;
 }
-.as-table-row{
+#body-background{
+	flex: 1;
 	background-color: #EEEEEE;
-    display:table-row;
-	height: 100%;
+	
+	display: flex;
+	justify-content: center;
 }
 .carddiv{
-	position: relative;
-	top: -100px;
-	color: black;
+	flex:1;
+	
 	background-color: white;
 	max-width: 800px;
-	margin: auto;
 	padding: 30px;
-	height:100%;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #CCCCCC;

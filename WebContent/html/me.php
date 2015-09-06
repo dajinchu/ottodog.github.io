@@ -8,7 +8,7 @@
 <style>
 </style>
 <body>
-	<div class="as-table">
+	<div id = "top-level-div">
 	<div class = "me">
 		<?php include 'menu.php'; ?>
 	
@@ -17,14 +17,14 @@
 		</div>
 	</div>
 	
-	<div class = "as-table-row">
+	<div id = "body-background">
 	<div class = "carddiv">
-		<!--<p>
+		<p>
 		My name ain't Da-Jin<br>
 		You're just imagining<br>
 		It's dj chu<br>
 		And I'd love to meet you<br>
-		</p>-->
+		</p>
 	</div>
 	</div>
 	
