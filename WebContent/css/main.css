@@ -16,7 +16,10 @@ a{
 	height: 200px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
 }
 #top-level-div {
     display: flex;
@@ -28,9 +31,15 @@ a{
 #body-background{
 	flex: 1;
 	background-color: #EEEEEE;
-	
+	position: relative;
+}
+#body-card-buffer{
+	width: 100%;
+	height: calc(100% + 75px);
 	display: flex;
 	justify-content: center;
+	position: absolute;
+	top: -75px;
 }
 .carddiv{
 	flex:1;

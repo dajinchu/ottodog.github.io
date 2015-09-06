@@ -18,6 +18,7 @@
 	</div>
 	
 	<div id = "body-background">
+	<div id = "body-card-buffer">
 	<div class = "carddiv">
 		<p>
 		My name ain't Da-Jin<br>
@@ -25,6 +26,7 @@
 		It's dj chu<br>
 		And I'd love to meet you<br>
 		</p>
+	</div>
 	</div>
 	</div>
 	
