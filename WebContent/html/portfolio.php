@@ -5,19 +5,24 @@
 	<meta charset="ISO-8859-1">
 	<title>Da-Jin</title>
 </head>
+<style>
+</style>
 <body>
-	<div class="as-table">
-	<div class = "portfolio">
+	<div id = "top-level-div">
 		<?php include $_SERVER[DOCUMENT_ROOT].'/html/menu.php'; ?>
-			
+	<div class = "portfolio">
+	
+	
 		<div class = "center">
 			<h1>Portfolio</h1>
 		</div>
-	</div>
+		</div>
 	
-	<div class = "as-table-row">
+	<div id = "body-background">
+	<div id = "body-card-buffer">
 	<div class = "carddiv">
-		<p>I'm Da-Jin</p>
+		<p>Use the portfolio tab to see what we do in each subject at Mass Academy.</p>
+	</div>
 	</div>
 	</div>
 	

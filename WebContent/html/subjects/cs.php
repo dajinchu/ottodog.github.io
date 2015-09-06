@@ -8,8 +8,8 @@
 <style>
 </style>
 <body>
-	<div class="as-table">
-	<div class="cs">
+	<div id = "top-level-div">
+	<div class = "cs">
 		<?php include $_SERVER[DOCUMENT_ROOT].'/html/menu.php'; ?>
 	
 		<div class = "center">
@@ -17,9 +17,11 @@
 		</div>
 	</div>
 	
-	<div class = "as-table-row">
+	<div id = "body-background">
+	<div id = "body-card-buffer">
 	<div class = "carddiv">
-		<p>This website is part of the CS project.</p>
+		<p>In Computer Science, we make these websites.</p>
+	</div>
 	</div>
 	</div>
 	

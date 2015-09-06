@@ -5,23 +5,26 @@
 	<meta charset="ISO-8859-1">
 	<title>Da-Jin</title>
 </head>
-<body >
-	<div class="as-table">
-	<div class="welcome">
+<style>
+</style>
+<body>
+	<div id = "top-level-div">
+	<div class = "welcome">
 		<?php include $_SERVER[DOCUMENT_ROOT].'/html/menu.php'; ?>
 	
 		<div class = "center">
-			<h1>Welcome</h1>
+			<h1>Welcome!</h1>
 		</div>
 	</div>
 	
-	<div class = "as-table-row">
+	<div id = "body-background">
+	<div id = "body-card-buffer">
 	<div class = "carddiv">
-		<p>This is a website.</p>
+		<p>This is a website for CS at Mass Academy.</p>
+	</div>
 	</div>
 	</div>
 	
 	</div>
-	
 </body>
 </html>
