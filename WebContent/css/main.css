@@ -85,41 +85,9 @@ a{
 .tab > a{
 	padding: 10px;
 }
-#subject-container div:hover, .tab:hover > a{
+.tab:hover > a{
 	text-decoration: underline;
 }
-.tab:hover > #subject-container{
-	visibility: visible;
-}
-
-#subject-container{
-	position: absolute;
-	display: flex; 
-	flex-flow: column wrap;
-	width: 100%;
-	visibility: hidden;
-	/*justify-content: space-around;
-	/*display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-flex-flow: column wrap;
-	-moz-flex-flow: column wrap;
-	-ms-flex-flow: column wrap;
-	flex-flow: column wrap;
-	justify-content: space-around;
-	width:100%;
-	-webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;*/
-}
-#subject-container > div > a{
-	padding: 7px;
-}
-
-
 #current-tab{
 	color: #3399FF;
 }
