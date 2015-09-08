@@ -18,7 +18,7 @@
 	</div>
 	
 	<div id = "body-background">
-	<div id = "body-card-buffer">
+	<div class = "body-card-buffer stretch-to-bottom">
 	<div class = "carddiv">
 		<p>This is a website for CS at Mass Academy.</p>
 	</div>
