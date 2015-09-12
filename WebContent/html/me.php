@@ -18,7 +18,7 @@
 	</div>
 	
 	<div id = "body-background">
-	<div class = "body-card-buffer stretch-to-bottom">
+	<div class = "body-card-buffer">
 	<div class = "carddiv">
 		<h3>HELLO</h3>
 		<h4>my name is Da-Jin.</h4>
@@ -39,15 +39,19 @@
 	<div class = "carddiv">
 		<h3>Log Frog</h3>
 		<h4>A game I published on Google Play</h4>
+		<p>Log Frog began at CodeDay Spring, a 24-hour coding marathon for students.
+		I continued to work on it over the summer before junior year, and published it that August.</p>
 		<pre>Log frog is a simple abstract puzzle game.
 Connect, rotate, and leap-frog logs to get to the green circle.
 Moving a log next to another log allows you to move any connected log.
 Includes 40 unique levels that increase in challenge; many will leave you stumped!</pre>
-<a href="https://play.google.com/store/apps/details?id=com.gmail.dajinchu.logfrog">
-  <img alt="Get it on Google Play"
-       src="https://googledrive.com/host/0B7V56SUAoohNfmpJaW1VY0FLVUpISmxXSEs3Z0ZQWWc4MkZZVUFNaG9YTmQybUFCc3J4M3M/logfrogicon.png"
-       width = "100px" height = "100px" />
-</a>
+		<img alt="Log Frog"
+       			src="/images/logfrogicon.png"
+       			width = "100px"/>
+       	<a href="https://play.google.com/store/apps/details?id=com.gmail.dajinchu.logfrog">
+  			<img alt="Get it on Google Play"
+       			src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
+		</a>
 	</div>
 	</div>
 	</div>
