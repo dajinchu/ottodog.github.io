@@ -40,6 +40,24 @@
 				<h4>Mr. Ludt</h4>
 				<p>Humanities is History and English class combined into a big discussion thing. Every week we write a journal discussing the past week, a grammar error in the wild, and 20 new vocab words we've learned.</p>
 			</div>
+			<div class = "carddiv">
+				<h3>Math</h3>
+				<h4>Mr. Regele</h4>
+				<p>Math class is all about problem solving. 
+				Though we learn enough math to bridge the gap between Algebra II and calculus, the class mainly focuses on the students finding and presenting solutions to problems in many fields of math.</p>
+			</div>
+			<div class = "carddiv">
+				<h3>French</h3>
+				<h4>Ms. Wildfong</h4>
+				<p>French is taught immersion style. We learn grammar and read stories. 
+				We learn new vocabulary by defining and recording any new words we encounter.</p>
+			</div>
+			<div class = "carddiv">
+				<h3>Physics</h3>
+				<h4>Mr. Ellis</h4>
+				<p>Physics class is a combination of note taking and doing problem sets.
+				It's considered advanced physics, but does not exactly follow any AP curriculum.</p>
+			</div>
 		</div>
 	</div>
 	</div>

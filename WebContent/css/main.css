@@ -70,6 +70,7 @@ a{
 .carddiv > p, pre{
 	margin-top: 20px;
 	color: #555;
+	clear: both;
 }
 .nav{
 	display: flex; 
