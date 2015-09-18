@@ -10,8 +10,13 @@
 <body>
 	<div id = "top-level-div">
 	<div class = "me">
-		<?php include $_SERVER[DOCUMENT_ROOT].'/html/menu.php'; ?>
-	
+<div id="paddingBlock">
+	<div class="nav">
+  		<div class = "tab" id = "current-tab"> <a href="/html/me.php">PERSONAL</a></div>
+  		<div class = "tab"> <a href="/html/portfolio.php">PORTFOLIO</a></div> 
+	</div>
+	<hr class = "scene_element scene_element--lefttab">
+</div>	
 		<div class = "center">
 			<h1>dj chu</h1>
 		</div>

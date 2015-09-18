@@ -6,13 +6,6 @@ body, pre{
 body{
 	background-color: #EEEEEE;
 }
-.tab > a{
-	text-decoration: none;
-	font-weight:bold;
-	font-size:1.2em;
-	color: #FFFFFF;
-	display:block;
-}
 .center{
 	color: white;
 	font-size: 1.5em;
@@ -20,6 +13,9 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
 }
 #top-level-div {
     display: flex;
@@ -81,13 +77,50 @@ body{
 	flex: 1;
 	text-align: center;
 	position: relative;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #EEEEEE;
+	
 }
 .tab > a{
-	padding: 10px;
+	padding: 20px;
+	text-decoration: none;
+	font-weight:bold;
+	font-size:1.25em;
+	color: #FFFFFF;
+	display:block;
 }
 .tab:hover > a{
 	text-decoration: underline;
 }
-#current-tab{
-	color: #3399FF;
+#current-tab > a{
+	color: rgb(8,191,215);
+}
+hr{
+	margin-bottom: -2px;
+	height: 3px;
+	width: 50%;
+	margin: 0;
+	border: none;
+	background-color: rgb(8,191,215);
+}
+
+@keyframes tabToRight {
+	0% { margin-left: 0;}
+	100% { margin-left: 50%;}
+}
+@keyframes tabToLeft {
+	100% { margin-left: 0;}
+	0% { margin-left: 50%;}
+}
+.scene_element {
+    animation-duration: .5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+.scene_element--lefttab{
+	animation-name: tabToLeft;
+}
+.scene_element--righttab{
+	animation-name: tabToRight;
 }

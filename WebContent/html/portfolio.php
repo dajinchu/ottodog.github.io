@@ -9,10 +9,14 @@
 </style>
 <body>
 	<div id = "top-level-div">
-		<?php include $_SERVER[DOCUMENT_ROOT].'/html/menu.php'; ?>
 	<div class = "portfolio">
-	
-	
+<div id="paddingBlock">
+	<div class="nav">
+  		<div class = "tab"> <a href="/html/me.php">PERSONAL</a></div>
+  		<div class = "tab" id = "current-tab"> <a href="/html/portfolio.php">PORTFOLIO</a></div> 
+	</div>
+	<hr class = "scene_element scene_element--righttab">
+</div>	
 		<div class = "center">
 			<h1>Portfolio</h1>
 		</div>
