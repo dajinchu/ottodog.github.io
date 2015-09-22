@@ -1,5 +1,5 @@
 @CHARSET "ISO-8859-1";
-html, body, h3,h4 { margin: 0; padding: 0; height:100%;} 
+html, body{ margin: 0; padding: 0; height:100%;} 
 body, pre{
 	font-family: 'Open Sans', sans-serif;
 }
@@ -25,48 +25,87 @@ body{
 	position: relative;
 }
 #body-background{
-	flex: 1;
+    width:100%;
 	position: relative;
 }
 .body-card-buffer{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: flex-start;
-	
+    width: 100%;
 	position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 	top: -75px;
-	width: 100%;
+    
+    display:flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 .stretch-to-bottom{
 	height: calc(100% + 75px);
 }
 .carddiv{
-	flex:1;
-	width: 100%;
-	
+    width: 300px;
+    max-height: 600px;
+    margin: auto;
+    
+    
 	background-color: white;
-	max-width: 800px;
-	padding: 30px;
-	padding-bottom: 10px;
-	margin-bottom: 20px;
+	margin: 10px;
+    padding-bottom: 10px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
-	
+    
+    display: flex;
+    flex-flow: column;
+    
+    transition: left 1s, top 1s, width 1s, height 1s;
+    transition-timing-function: ease-out;
+}
+.carddiv > .card-text{
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.carddiv h3, .carddiv h4, .carddiv p, .carddiv pre, .carddiv a{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .carddiv > h3{
-	font-size: 1.3em;
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: normal;
 	line-height: 24px;
+    padding-top: 30px;
 }
 .carddiv > h4{
-	font-size: 1em;
+    margin: 0;
+    flex: 0 auto;
+	font-size: .95em;
 	font-weight: normal;
-	line-height: 30px;
+    font-style: italic;
+    line-height: 30px;
 	margin-bottom: 20px;
 }
-.carddiv > p, .carddiv > pre, .carddiv > a{
+.icon{
+    width: 100%;
+}
+.carddiv p, .carddiv pre, .carddiv a{
 	color: #555;
 	clear: both;
+    margin-top: 0;
+    font-size: 1em;
+    line-height: 25px;
 }
+.expand{
+    width:100%;
+    max-height: none;
+    margin: 0;
+}
+.expand p{
+    flex: 0 auto;
+}
+
+
 .nav{
 	display: flex; 
 	align-items: stretch;

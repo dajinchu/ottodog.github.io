@@ -12,7 +12,7 @@
 	<div class = "portfolio">
 <div id="paddingBlock">
 	<div class="nav">
-  		<div class = "tab"> <a href="/html/me.php">PERSONAL</a></div>
+  		<div class = "tab"> <a href="/html/index.php">PERSONAL</a></div>
   		<div class = "tab" id = "current-tab"> <a href="/html/portfolio.php">PORTFOLIO</a></div> 
 	</div>
 	<hr class = "scene_element scene_element--righttab">
@@ -25,10 +25,12 @@
 	<div id = "body-background">
 		<div class = "body-card-buffer">
 			<div class = "carddiv">
-				<h3>Computer Science</h3>
-				<h4>Ms. Torrico</h4>
-				<p>This is a website for CS at Mass Academy.</p>
-			</div>
+                    <div class="card-text">
+				    <h3>Computer Science</h3>
+				    <h4>Ms. Torrico</h4>
+                    <p>This is a website for CS at Mass Academy.</p>
+                </div>
+            </div>
 			<div class = "carddiv">
 				<h3>STEM</h3>
 				<h4>Ms. Borowski</h4>
