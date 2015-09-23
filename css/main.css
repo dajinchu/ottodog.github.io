@@ -65,7 +65,6 @@ body{
 .carddiv > .card-text{
     -webkit-box-flex: 0 1;
     -moz-box-flex: 0 1;
-    width: 50%;
     -webkit-flex: 0 1;
     -ms-flex: 0 1;
     flex: 0 1;
@@ -146,6 +145,10 @@ body{
 	z-index: 1000;
 }
 .tab{
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
 	flex: 1;
 	text-align: center;
 	position: relative;
