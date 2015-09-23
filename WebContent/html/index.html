@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include $_SERVER[DOCUMENT_ROOT].'/html/head.php';?>
-	<meta charset="ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/colormap.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
 	<title>Da-Jin</title>
 </head>
-<style>
-</style>
 <body>
     <script>
-    function expand(elmnt){
+    function expand(elmnt){        
         var card = elmnt.parentElement;
         var clone = card.cloneNode(true);
         var offsets = card.getBoundingClientRect();
         
+       
         document.body.appendChild(clone);
         clone.style.position = "absolute";
-        clone.style.top = (offsets.top+ + window.pageYOffset - clone.ownerDocument.documentElement.clientTop-clone.style.paddingTop)+"px";
-        clone.style.left = (offsets.left-clone.style.paddingLeft)+"px";
+        
+         console.log(clone.childElementCount);
+        readmore = clone.getElementsByClassName("read-more");
+        console.log(readmore);
+        readmore[0].innerHTML = "See Less";
+        console.log(readmore);
+        readmore[0].onclick = function(){
+            shrink(clone);
+        };
+        
+        
+        
+        shrunktop = (offsets.top + window.pageYOffset - clone.ownerDocument.documentElement.clientTop-clone.style.paddingTop);
+        shrunkleft = (offsets.left-clone.style.paddingLeft);
+        
+        clone.style.top = shrunktop+"px";
+        clone.style.left = shrunkleft+"px";
         setTimeout(
             function(){
                 clone.style.left="0px";
                 clone.classList.add("expand");
             },1);
+    }
+    function shrink(card){
+        
+        card.style.top = shrunktop+"px";
+        card.style.left = shrunkleft+"px";
+        card.classList.remove("expand");
+        setTimeout(
+            function(){
+                document.body.removeChild(card);
+            },1000);
     }
     </script>
     
@@ -45,6 +71,7 @@
 	<div class = "carddiv">
 		<h3>HELLO</h3>
 		<h4>my name is Da-Jin.</h4>
+        <div class = "card-text">
 		<p>My real name is 朱大靖, which is pronounced zhu da jing, hence my official english name. 
 		<!--My rapper name is dj chu, and my indian name is diraj.--> I was born in Winchester, but my mom is from Malaysia, and my dad is from Taiwan. 
 		They're both native chinese speakers, but have been permanent residents for over a decade, and got their American citizenships a few years ago.</p>
@@ -52,9 +79,11 @@
 		Because we moved here from Waltham when I was three, I can't remember anything outside of Bedford, so 
 		I've always known the same 180 kids, and the switch to Mass Academy was pretty significant.
 		Luckily, it appears to be the right decision so far. I'm not falling asleep in class anymore, and we do cool stuff like build websites.</p>
+        </div>
+        <a class="read-more" onclick="expand(this)">Read More</a>
 	</div>
 	<div class = "carddiv">
-        <img class = "icon" src="/images/bhsbuilding.jpg"/>
+        <img class = "icon" alt = "BHS Building" src="/images/bhsbuilding.jpg"/>
         <h3>Bedford High School</h3>
 		<h4>My sending school</h4>
         <div class = "card-text">
@@ -65,31 +94,37 @@
 		<a href="http://bedford.k12.ma.us/home/bedford-high-school.html">BHS website</a>
 		<br>
         </div>
-        <a onclick="expand(this)">Read More</a>
+        <a class="read-more" onclick="expand(this)">Read More</a>
 	</div>
 	<div class = "carddiv">
+        <img class = "icon" alt="Log Frog Icon" src="/images/logfrogicon.png"/>
 		<h3>Log Frog</h3>
 		<h4>A game I published on Google Play</h4>
+        <div class = "card-text">
 		<p>Log Frog began spring of 2015 at <a href="https://codeday.org/boston">CodeDay</a>, a 24-hour coding marathon for students.
 		I continued to work on it over the summer before junior year, and published it that August.</p>
-		<pre>Log frog is a simple abstract puzzle game.
+		<p>Log frog is a simple abstract puzzle game.
 Connect, rotate, and leap-frog logs to get to the green circle.
 Moving a log next to another log allows you to move any connected log.
-Includes 40 unique levels that increase in challenge; many will leave you stumped!</pre>
+Includes 40 unique levels that increase in challenge; many will leave you stumped!</p>
        	<a href="https://play.google.com/store/apps/details?id=com.gmail.dajinchu.logfrog">
   			<img alt="Get it on Google Play"
        			src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
 		</a>
+        </div>
+        <a class="read-more" onclick="expand(this)">Read More</a>        
 	</div>
 	<div class = "carddiv">
+        <img class = "icon" alt="DI Logo" src="/images/dilogo.png"/>
 		<h3>Destination Imagination</h3>
 		<h4>My life, grades 3-9</h4>
+        <div class = "card-text">
 		<p><a href = "http://www.destinationimagination.org/">Destination Imagination</a> taught me, to name a few, teamwork, STEM principles, creativity, project management, and critical thinking by solving and presenting solutions to an open-ended challenge. 
 		Solutions included presenting a story and building a small structure to hold weight. 
 		My team won the regional and state level tournaments and represented Massachusetts at Global Finals seven times, placing top ten six times, including first and third place. 
 		It has changed me tremendously, and I would not be who I am today, had I not signed up in third grade.</p>
-		<img src = "/images/dilogo.png" />
-		<img src = "/images/structure.jpg" height = "300px"/>
+        </div>
+        <a class="read-more" onclick="expand(this)">Read More</a>        
 	</div>
 	</div>
 	</div>
