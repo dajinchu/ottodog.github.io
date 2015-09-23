@@ -19,6 +19,7 @@ body{
 }
 #top-level-div {
     display: -webkit-flex;
+    -webkit-flex-direction: column;
     display: flex;
     flex-direction: column;
     height: 100%;
