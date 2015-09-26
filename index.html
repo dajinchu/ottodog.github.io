@@ -29,8 +29,8 @@
         
         
         
-        shrunktop = (offsets.top + window.pageYOffset - clone.ownerDocument.documentElement.clientTop-clone.style.paddingTop);
-        shrunkleft = (offsets.left-clone.style.paddingLeft);
+        shrunktop = (offsets.top + window.pageYOffset - clone.ownerDocument.documentElement.clientTop-clone.style.paddingTop-clone.style.marginTop);
+        shrunkleft = (offsets.left-clone.style.paddingLeft-clone.style.marginLeft);
         
         clone.style.top = shrunktop+"px";
         clone.style.left = shrunkleft+"px";
