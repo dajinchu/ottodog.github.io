@@ -73,7 +73,9 @@ body{
     -moz-box-flex: 0 1;
     -webkit-flex: 0 1;
     -ms-flex: 0 1;
+    -webkit-order: 3;
     flex: 0 1;
+    order: 3;
     padding-left: 20px;
     padding-right: 20px;
     text-overflow: ellipsis;
@@ -82,6 +84,8 @@ body{
 .carddiv h3, .carddiv h4{
     padding-left: 20px;
     padding-right: 20px;
+    -webkit-order: 2;
+    order: 2;
 }
 .carddiv > h3{
     margin: 0;
@@ -113,7 +117,9 @@ body{
     -moz-box-flex: 0 0;
     -webkit-flex: 0 0;
     -ms-flex: 0 0;
+    -webkit-order: 1;
     flex: 0 0;
+    order: 1;
     width: 100%;
 }
 .carddiv p, .carddiv pre, .carddiv a{
@@ -140,11 +146,14 @@ body{
     padding-right: 20px;
     text-decoration: underline;
     cursor: pointer;
+    -webkit-order: 100;
+    order: 100;
 }
 
 
 .nav{
     display: -webkit-flex;
+    -webkit-align-items: stretch;
 	display: flex;
 	align-items: stretch;
 	position:relative;
