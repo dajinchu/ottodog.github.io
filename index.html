@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/colormap.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
-	<title>Da-Jin</title>
+	<title>Da-Jin|Personal</title>
 </head>
 <body>
     <script>
@@ -18,19 +18,19 @@
         document.body.appendChild(clone);
         clone.style.position = "absolute";
         
-         console.log(clone.childElementCount);
         readmore = clone.getElementsByClassName("read-more");
-        console.log(readmore);
         readmore[0].innerHTML = "See Less";
-        console.log(readmore);
         readmore[0].onclick = function(){
             shrink(clone);
         };
         
         
+        var style = card.currentStyle || window.getComputedStyle(card);
+        shrunktop = (offsets.top + window.pageYOffset - clone.ownerDocument.documentElement.clientTop);
+        shrunkleft = (offsets.left-10);
         
-        shrunktop = (offsets.top + window.pageYOffset - clone.ownerDocument.documentElement.clientTop-clone.style.paddingTop-clone.style.marginTop);
-        shrunkleft = (offsets.left-clone.style.paddingLeft-clone.style.marginLeft);
+                console.log(style.marginLeft+" "+shrunkleft);
+
         
         clone.style.top = shrunktop+"px";
         clone.style.left = shrunkleft+"px";
