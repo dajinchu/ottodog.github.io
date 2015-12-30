@@ -8,6 +8,7 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
   </head>
   <body>
     <!-- 3. Declare the element. Configure using its attributes. -->
@@ -15,6 +16,10 @@
     <paper-input label="Your name here"></paper-input>
     <paper-button>Say Hello</paper-button>
     <div id="greeting"></div>
+      <iron-collapse id = "collapse">
+        <div>Hey hey</div>
+        <div>second line!</div>
+      </iron-collapse>
 
     <script>
       // To ensure that elements are ready on polyfilled browsers, 
@@ -24,8 +29,14 @@
         var button = document.querySelector('paper-button');
         var fab = document.querySelector('paper-fab');
         var greeting = document.getElementById("greeting");
+        var collapse = document.getElementById("collapse");
+        
+          
         button.addEventListener('click', function() {
           greeting.textContent = 'Hello, ' + input.value;
+        });
+        fab.addEventListener('click', function(){
+          collapse.toggle();
         });
       });
     </script>
