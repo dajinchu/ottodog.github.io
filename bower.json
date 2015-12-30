@@ -1,0 +1,19 @@
+{
+  "name": "dajinchu",
+  "description": "website for CS",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "dajinchu.me",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.2.0",
+    "paper-elements": "PolymerElements/paper-elements#~1.0.7"
+  }
+}

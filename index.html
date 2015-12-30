@@ -1,131 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/colormap.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-    <meta charset="UTF-8">
-	<title>Da-Jin | Personal</title>
-</head>
-<body>
-    <script>
-    function expand(elmnt){        
-        var card = elmnt.parentElement;
-        var clone = card.cloneNode(true);
-        var offsets = card.getBoundingClientRect();
-        
-       
-        document.body.appendChild(clone);
-        clone.style.position = "absolute";
-        
-        readmore = clone.getElementsByClassName("read-more");
-        readmore[0].innerHTML = "See Less";
-        readmore[0].onclick = function(){
-            shrink(clone);
-        };
-        
-        
-        shrunktop = (offsets.top + window.pageYOffset - clone.ownerDocument.documentElement.clientTop);
-        shrunkleft = (offsets.left-10);
-        
-        
-        clone.style.top = shrunktop+"px";
-        clone.style.left = shrunkleft+"px";
-        setTimeout(
-            function(){
-                clone.style.left="0px";
-                clone.classList.add("expand");
-            },1);
-    }
-    function shrink(card){
-        
-        card.style.top = shrunktop+"px";
-        card.style.left = shrunkleft+"px";
-        card.classList.remove("expand");
-        setTimeout(
-            function(){
-                document.body.removeChild(card);
-            },1000);
-    }
+<html><head>
+    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
     </script>
-    
-	<div id = "top-level-div">
-	<div class = "me">
-<div id="paddingBlock">
-	<div class="nav">
-  		<div class = "tab" id = "current-tab"> <a href="index.html">PERSONAL</a></div>
-  		<div class = "tab"> <a href="portfolio.html">PORTFOLIO</a></div> 
-	</div>
-	<hr class = "scene_element scene_element--lefttab">
-</div>	
-		<div class = "center">
-			<h1>dj chu</h1>
-		</div>
-	</div>
-	
-	<div id = "body-background">
-	<div class = "body-card-buffer">
-	<div class = "carddiv">
-		<h3>HELLO</h3>
-		<h4>my name is Da-Jin.</h4>
-        <div class = "card-text">
-		<p>My real Chinese name is 朱大靖, which is pronounced zhu da jing, hence my official English name. 
-		<!--My rapper name is dj chu, and my indian name is diraj.--> I was born in Winchester, and my parents came to this country in 1999. 
-		They're both native chinese speakers, but have been permanent residents for over a decade, and got their American citizenships a few years ago.</p>
-		<p>Currently, I am a junior at Mass Academy of Math and Science, and it's a forty minute drive every morning to get from Bedford to Worcester.
-		Because we moved here from Waltham when I was three, I can't remember anything outside of Bedford, so 
-		I've always known the same 180 kids, and the switch to Mass Academy was pretty significant.
-		Luckily, it appears to be the right decision so far. I'm not falling asleep in class anymore, and we do cool stuff like build websites.</p>
-        </div>
-        <a class="read-more" onclick="expand(this)">Read More</a>
-	</div>
-	<div class = "carddiv">
-        <img class = "icon" alt = "BHS Building" src="images/bhsbuilding.jpg"/>
-        <h3>Bedford High School</h3>
-		<h4>My sending school</h4>
-        <div class = "card-text">
 
-		<p>BHS is a small public high school with around 200 people per grade. 
-		Students mostly come from the town of Bedford, but some also come from Hanscom Air Force Base or from Boston through the METCO system.
-		Bedford is well-known for its social studies program, and has done very well on history fair in the past.</p>
-		<a href="http://bedford.k12.ma.us/home/bedford-high-school.html">BHS website</a>
-		<br>
-        </div>
-        <a class="read-more" onclick="expand(this)">Read More</a>
-	</div>
-	<div class = "carddiv">
-        <img class = "icon" alt="Log Frog Icon" src="images/logfrogicon.png"/>
-		<h3>Log Frog</h3>
-		<h4>A game I published on Google Play</h4>
-        <div class = "card-text">
-		<p>Log Frog began spring of 2015 at <a href="https://codeday.org/boston">CodeDay</a>, a 24-hour coding marathon for students.
-		I continued to work on it over the summer before junior year, and published it that August.</p>
-		<p>Log frog is a simple abstract puzzle game.
-Connect, rotate, and leap-frog logs to get to the green circle.
-Moving a log next to another log allows you to move any connected log.
-Includes 40 unique levels that increase in challenge; many will leave you stumped!</p>
-       	<a href="https://play.google.com/store/apps/details?id=com.gmail.dajinchu.logfrog">
-  			<img alt="Get it on Google Play"
-       			src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-		</a>
-        </div>
-        <a class="read-more" onclick="expand(this)">Read More</a>        
-	</div>
-	<div class = "carddiv">
-        <img class = "icon" alt="DI Logo" src="images/dilogo.png"/>
-		<h3>Destination Imagination</h3>
-		<h4>My life, grades 3-9</h4>
-        <div class = "card-text">
-		<p><a href = "http://www.destinationimagination.org/">Destination Imagination</a> taught me, to name a few, teamwork, STEM principles, creativity, project management, and critical thinking by solving and presenting solutions to an open-ended challenge. 
-		Solutions included presenting a story and building a small structure to hold weight. 
-		My team won the regional and state level tournaments and represented Massachusetts at Global Finals seven times, placing top ten six times, including first and third place. 
-		It has changed me tremendously, and I would not be who I am today, had I not signed up in third grade.</p>
-        </div>
-        <a class="read-more" onclick="expand(this)">Read More</a>        
-	</div>
-	</div>
-	</div>
-	
-	</div>
-</body>
+    <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+  </head>
+  <body>
+    <!-- 3. Declare the element. Configure using its attributes. -->
+    <paper-fab></paper-fab>
+    <paper-input label="Your name here"></paper-input>
+    <paper-button>Say Hello</paper-button>
+    <div id="greeting"></div>
+
+    <script>
+      // To ensure that elements are ready on polyfilled browsers, 
+      // wait for WebComponentsReady. 
+      document.addEventListener('WebComponentsReady', function() {
+        var input = document.querySelector('paper-input');
+        var button = document.querySelector('paper-button');
+        var fab = document.querySelector('paper-fab');
+        var greeting = document.getElementById("greeting");
+        button.addEventListener('click', function() {
+          greeting.textContent = 'Hello, ' + input.value;
+        });
+      });
+    </script>
+  </body>
 </html>
