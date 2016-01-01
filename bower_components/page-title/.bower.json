@@ -1,0 +1,38 @@
+{
+  "name": "page-title",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zacharytamas/page-title",
+  "authors": [
+    "Zachary Jones <zacharytamas@gmail.com>"
+  ],
+  "description": "A Polymer element for easily updating a webpage's title, such as in a SPA.",
+  "keywords": [
+    "web-components",
+    "polymer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.0.7"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.5",
+    "paper-input": "PolymerElements/paper-input#~1.0.6"
+  },
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "4b4e7fb3267103f94c24b3043a0c889e5f1d2eb6"
+  },
+  "_source": "git://github.com/zacharytamas/page-title.git",
+  "_target": "~1.0.0",
+  "_originalSource": "page-title",
+  "_direct": true
+}

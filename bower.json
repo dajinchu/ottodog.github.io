@@ -17,6 +17,7 @@
     "paper-elements": "PolymerElements/paper-elements#~1.0.7",
     "iron-pages": "PolymerElements/iron-pages#~1.0.5",
     "iron-ajax": "PolymerElements/iron-ajax#~1.1.1",
-    "iron-list": "PolymerElements/iron-list#~1.1.7"
+    "iron-list": "PolymerElements/iron-list#~1.1.7",
+    "page-title": "~1.0.0"
   }
 }

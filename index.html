@@ -22,7 +22,9 @@
     <link rel="import" href="bower_components/paper-styles/shadow.html">
     <link rel="import" href="bower_components/paper-styles/typography.html">
     <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+    <link rel="import" href="bower_components/page-title/page-title.html">
     
+        
     </head>
     
     <style is="custom-style">
@@ -50,9 +52,12 @@
     <body class="fullbleed vertical layout">
       <!-- 3. Declare the element. Configure using its attributes. -->
       <template is="dom-bind" id="header">
+        <page-title base-title="Da-Jin Chu"
+                    title="[[selectedItem.innerHTML]]"></page-title>
+          
         <paper-header-panel mode="standard">
             <paper-toolbar class="medium-tall">
-                <iron-pages class="top title" selected={{selected}}>
+                <iron-pages class="top title" selected=[[selected]] selected-item="{{selectedItem}}">
                     <div>Personal</div>
                     <div>Portfolio</div>
                 </iron-pages>
@@ -62,7 +67,7 @@
                 </paper-tabs>
             </paper-toolbar>
             
-            <iron-pages selected={{selected}}>
+            <iron-pages selected=[[selected]]>
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
@@ -99,7 +104,6 @@
           document.addEventListener('WebComponentsReady', function() {
               var header = document.querySelector("template#header");
               header.selected = 1;
-              
           });
           function toggle(e){
               var readmore = e.getElementsByClassName("readmore")[0];
@@ -111,6 +115,7 @@
                   icon.setAttribute("icon","icons:expand-more");
               }
           }
+          
       </script>
     </body>
 </html>
