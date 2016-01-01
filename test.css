@@ -11,3 +11,6 @@ paper-card{
     margin: 5px;
     width: 100%;
 }
+.card-content > .title{
+    @apply(--paper-font-title);
+}

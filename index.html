@@ -17,14 +17,35 @@
     <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
     <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
     <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
     <link rel="import" href="bower_components/paper-styles/shadow.html">
     <link rel="import" href="bower_components/paper-styles/typography.html">
     <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
     
-    <link rel="stylesheet" type="text/css" href="test.css">
-
     </head>
+    
+    <style is="custom-style">
+        html, body {
+            font-family: 'Roboto', 'Noto', sans-serif;
+        }
+        paper-tab{
+            @apply(--paper-font-body1);
+        }
+        .cards{
+            padding: 5px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        paper-card{
+            margin: 5px;
+            width: 100%;
+        }
+        .card-content .title{
+            @apply(--paper-font-headline);
+        }
+    </style>
     
     <body class="fullbleed vertical layout">
       <!-- 3. Declare the element. Configure using its attributes. -->
@@ -50,12 +71,18 @@
                     <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>
                     
                     <template is="dom-repeat" items="{{data}}" as="course">
-                        <paper-card heading="{{course.name}} ({{course.teacher}})" onclick="toggle(this)">
-                            <iron-collapse class="card-content readmore">
-                                <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
-                                    <p>{{readmore.p}}</p>
-                                </template>
-                            </iron-collapse>
+                        <paper-card onclick="toggle(this)">
+                            <div class="card-content">
+                                <div class="layout horizontal center justified">
+                                    <div class="title">{{course.name}} ({{course.teacher}})</div>
+                                    <iron-icon class="more-less-icon" icon="icons:expand-more"></iron-icon>
+                                </div>
+                                <iron-collapse class="readmore">
+                                    <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
+                                        <p>{{readmore.p}}</p>
+                                    </template>
+                                </iron-collapse>
+                            </div>
                         </paper-card>
                     </template>
                 </div>
@@ -75,7 +102,14 @@
               
           });
           function toggle(e){
-              e.getElementsByClassName("readmore")[0].toggle();
+              var readmore = e.getElementsByClassName("readmore")[0];
+              var icon = e.getElementsByClassName("more-less-icon")[0];
+              readmore.toggle();
+              if(readmore.opened){
+                  icon.setAttribute("icon","icons:expand-less");
+              }else{
+                  icon.setAttribute("icon","icons:expand-more");
+              }
           }
       </script>
     </body>
