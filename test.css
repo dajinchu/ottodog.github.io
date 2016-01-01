@@ -1,8 +1,13 @@
 html, body {
-    height: 100%;
-    margin: 0;
     font-family: 'Roboto', 'Noto', sans-serif;
 }
-paper-scroll-header-panel {
-    height: 100%;
+.cards{
+    padding: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+paper-card{
+    margin: 5px;
+    width: 100%;
 }
