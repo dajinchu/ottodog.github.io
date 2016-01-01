@@ -1,5 +1,5 @@
 [
-  {"name": "Bob"},
-  {"name": "Tim"},
-  {"name": "Mike"}
+  {"class": "Math","teacher":"Mr. Regele"},
+  {"class": "Humanities","teacher":"Mr. Ludt"},
+  {"class": "Physics","teacher":"Mr. Ellis"}
 ]

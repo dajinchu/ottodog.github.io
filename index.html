@@ -5,7 +5,7 @@
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
     </script>
         
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
 
     <!-- 2. Use an HTML Import to bring in some elements. -->
@@ -17,11 +17,14 @@
     <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
     <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
     <link rel="import" href="bower_components/iron-list/iron-list.html">
+    <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-item/paper-item-body.html">
     <link rel="import" href="bower_components/paper-styles/shadow.html">
     <link rel="import" href="bower_components/paper-styles/typography.html">
     
+    <link rel="stylesheet" type="text/css" href="test.css">
+
     </head>
     
     <body>
@@ -33,8 +36,8 @@
                     <div>Personal</div>
                     <div>Portfolio</div>
                 </iron-pages>
-                <paper-tabs class="bottom fit" selected={{selected}}>
-                    <paper-tab link>Personal</paper-tab>
+                <paper-tabs class="bottom fit" selected={{selected}} style="width: 300px;">
+                    <paper-tab>Personal</paper-tab>
                     <paper-tab>Portfolio</paper-tab>
                 </paper-tabs>
             </paper-toolbar>
@@ -46,12 +49,17 @@
                 </div>
                 <div class="panel">
                     <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>
-                    <iron-list items="[[data]]" as="item">
+                    <iron-list id="portfolio-list" items="[[data]]" as="item">
                         <template>
-                            <paper-item>
+                            <paper-item onclick="toggle(this)" id="{{item.class}}">
                                 <paper-item-body two-line>
-                                    <div>[[item.name]]</div>
-                                    <div secondary>Second</div>
+                                    <div>[[item.class]]</div>
+                                    <div secondary>[[item.teacher]]</div>
+                                    <iron-collapse class="readmore">
+                                        <div>collapsed content is here</div>
+                                        <div>collapsed content2 is here</div>
+                                        <div>collapsed content3 is here</div>
+                                    </iron-collapse>
                                 </paper-item-body>
                             </paper-item>
                         </template>
@@ -69,9 +77,14 @@
           // wait for WebComponentsReady. 
           document.addEventListener('WebComponentsReady', function() {
               var header = document.querySelector("template#header");
-              header.selected = 0;
+              header.selected = 1;
               
           });
+          function toggle(e){
+              console.log(e.getAttribute('id'),"DFD");
+              e.getElementsByClassName("readmore")[0].toggle();
+              document.getElementById("portfolio-list").notifyResize();
+          }
       </script>
     </body>
 </html>
