@@ -49,21 +49,13 @@
                 <div class="layout vertical center cards">
                     <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>
                     
-                    <template is="dom-repeat" items="{{data}}">
-                        <paper-card heading="{{item.class}}" onclick="toggle(this)">
-                            <div class="card-content">
-                                <div>{{item.teacher}}</div>
-                                <iron-collapse class="readmore">
-                                    <div>collapsed content is here</div>
-                                    <div>collapsed content2 is here</div>
-                                    <div>collapsed content3 is here</div>
-                                    <div>collapsed content3 is here</div>
-                                    <div>collapsed content3 is here</div>
-                                    <div>collapsed content3 is here</div>
-                                    <div>collapsed content3 is here</div>
-                                    <div>collapsed content3 is here</div>
-                                </iron-collapse>
-                            </div>
+                    <template is="dom-repeat" items="{{data}}" as="course">
+                        <paper-card heading="{{course.name}} ({{course.teacher}})" onclick="toggle(this)">
+                            <iron-collapse class="card-content readmore">
+                                <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
+                                    <p>{{readmore.p}}</p>
+                                </template>
+                            </iron-collapse>
                         </paper-card>
                     </template>
                 </div>
