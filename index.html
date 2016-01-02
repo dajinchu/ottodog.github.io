@@ -54,7 +54,7 @@
         .card-content .title{
             @apply(--paper-font-headline);
         }
-        paper-toolbar.tall .title div{
+        paper-toolbar.medium-tall .title div{
             opacity: 1;
             transition: opacity 0.2s linear;
         }
@@ -83,7 +83,7 @@
         <page-title base-title="Da-Jin Chu"
                     title="[[selectedItem.innerHTML]]"></page-title>
           
-        <paper-header-panel mode="waterfall-tall">
+        <paper-header-panel mode="waterfall-tall" tall-class="medium-tall">
             <paper-toolbar>
                 <iron-pages class="top title" selected=[[selected]] selected-item="{{selectedItem}}">
                     <div>Personal</div>
