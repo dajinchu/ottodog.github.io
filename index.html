@@ -59,13 +59,16 @@
             transition: opacity 0.2s linear;
             opacity: 0;
         }
-        
         #personal-container paper-card {
             --paper-card-header-color: var(--paper-pink-500);
+        }
+        .chinese{
+            font: 'SimHei', sans-serif;
         }
     </style>
     
     <body class="fullbleed vertical layout">
+        
       <!-- 3. Declare the element. Configure using its attributes. -->
       <template is="dom-bind" id="header">
         <page-title base-title="Da-Jin Chu"
@@ -85,6 +88,14 @@
             
             <iron-pages selected=[[selected]]>
                 <div class="layout vertical center cards" id="personal-container">
+                    
+                    <paper-card heading="Da-Jin Chu" elevation="2">
+                        <div class="card-content">
+                        <p>My real Chinese name is <span class="chinese">朱大靖</span>, which is pronounced zhu da jing, hence my official English name. I was born in Winchester, and my parents came to this country in 1999. They're both native chinese speakers, but have been permanent residents for over a decade, and got their American citizenships a few years ago.</p>
+		<p>Currently, I am a junior at Mass Academy of Math and Science, and it's a forty minute drive every morning to get from Bedford to Worcester. Because we moved here from Waltham when I was three, I can't remember anything outside of Bedford, so I've always known the same 180 kids, and the switch to Mass Academy was pretty significant. Luckily, it appears to be the right decision so far. I'm not falling asleep in class anymore, and we do cool stuff like build websites.</p>
+                        </div>
+                    </paper-card>
+                    
                     <paper-card heading="Log Frog" elevation="2" image="images/logfrogicon.png">
                         <div class="card-content">
                             <p>Log Frog began spring of 2015 at <a href="https://codeday.org/boston">CodeDay</a>, a 24-hour coding marathon for students. I continued to work on it over the summer before junior year, and published it that August.</p>
