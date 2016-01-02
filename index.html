@@ -24,6 +24,7 @@
     <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
     <link rel="import" href="bower_components/page-title/page-title.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">    
         
     </head>
     
@@ -59,12 +60,16 @@
         }
         paper-button{
             color: var(--paper-pink-500);
+            --paper-button-ink-color: var(--paper-pink-200);
         }
         .chinese{
             font-family: 宋体, sans-serif;
         }
         .spacer{
             @apply(--layout-flex); 
+        }
+        paper-icon-button {
+            --paper-icon-button-ink-color: white;
         }
     </style>
     
@@ -77,10 +82,16 @@
           
         <paper-scroll-header-panel id="headerpanel" class="flex" condenses keep-condensed-header scroll-away-topbar condensed-header-height="64">
             <paper-toolbar class="medium-tall">
-                <iron-pages class="top title" selected=[[selected]] selected-item="{{selectedItem}}">
-                    <div>Personal</div>
-                    <div>Portfolio</div>
-                </iron-pages>
+                <div class="top title">
+                    <iron-pages selected=[[selected]] selected-item="{{selectedItem}}">
+                        <div>Personal</div>
+                        <div>Portfolio</div>
+                    </iron-pages>
+                </div>
+                <div class="spacer"></div>
+                <paper-icon-button onclick="goLink('mailto:dajinchu@gmail.com')" icon="mail" title="email" alt="email"></paper-icon-button>
+                <paper-icon-button onclick="goLink('https://plus.google.com/+DaJinChu')" src="images/white%20gplus.png" title="G+" alt="google plus"></paper-icon-button>
+                <paper-icon-button onclick="goLink('https://github.com/ottodog')" src="images/GitHub-Mark-Light-64px.png" title="GitHub" alt="GitHub"></paper-icon-button>
                 <paper-tabs onclick="scrollUp()" class="bottom fit" selected={{selected}} style="height: 100%; width: 300px;">
                     <paper-tab>Personal</paper-tab>
                     <paper-tab>Portfolio</paper-tab>
