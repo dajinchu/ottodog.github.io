@@ -13,7 +13,7 @@
     <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
     <link rel="import" href="bower_components/iron-pages/iron-pages.html">
-    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
     <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
     <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
     <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
@@ -54,14 +54,6 @@
         .card-content .title{
             @apply(--paper-font-headline);
         }
-        paper-toolbar.medium-tall .title div{
-            opacity: 1;
-            transition: opacity 0.2s linear;
-        }
-        paper-toolbar .title div{
-            transition: opacity 0.2s linear;
-            opacity: 0;
-        }
         #personal-container paper-card {
             --paper-card-header-color: var(--paper-pink-500);
         }
@@ -83,13 +75,13 @@
         <page-title base-title="Da-Jin Chu"
                     title="[[selectedItem.innerHTML]]"></page-title>
           
-        <paper-header-panel mode="waterfall-tall" tall-class="medium-tall">
-            <paper-toolbar>
+        <paper-scroll-header-panel id="headerpanel" class="flex" condenses keep-condensed-header scroll-away-topbar condensed-header-height="64">
+            <paper-toolbar class="medium-tall">
                 <iron-pages class="top title" selected=[[selected]] selected-item="{{selectedItem}}">
                     <div>Personal</div>
                     <div>Portfolio</div>
                 </iron-pages>
-                <paper-tabs class="bottom fit" selected={{selected}} style="height: 100%; width: 300px;">
+                <paper-tabs onclick="scrollUp()" class="bottom fit" selected={{selected}} style="height: 100%; width: 300px;">
                     <paper-tab>Personal</paper-tab>
                     <paper-tab>Portfolio</paper-tab>
                 </paper-tabs>
@@ -161,8 +153,7 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
                     </template>
                 </div>
             </iron-pages>
-          </paper-header-panel>
-          
+          </paper-scroll-header-panel>          
         
       </template>
   
@@ -186,6 +177,9 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
           }
           function goLink(link){
               window.location.href = link;
+          }
+          function scrollUp(){
+              document.getElementById("headerpanel").scrollToTop(false);
           }
       </script>
     </body>
