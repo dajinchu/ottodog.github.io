@@ -32,6 +32,20 @@
         html, body {
             font-family: 'Roboto', 'Noto', sans-serif;
         }
+        paper-scroll-header-panel{
+
+            --paper-scroll-header-panel-full-header:{
+                background-image: url(images/headerfull.jpg);
+            };
+            --paper-scroll-header-panel-condensed-header: {
+                background-color: var(--paper-indigo-800);
+            };
+        }
+        paper-toolbar{
+            overflow: visible;
+            background-color: transparent;
+        }
+        
         paper-tabs{
             --paper-tabs-selection-bar-color: var(--paper-pink-200);
         }
@@ -81,7 +95,7 @@
                     title="[[selectedItem.innerHTML]]"></page-title>
           
         <paper-scroll-header-panel id="headerpanel" class="flex" condenses keep-condensed-header scroll-away-topbar condensed-header-height="64">
-            <paper-toolbar class="medium-tall">
+            <paper-toolbar class="tall">
                 <div class="top title">
                     <iron-pages selected=[[selected]] selected-item="{{selectedItem}}">
                         <div>Personal</div>
