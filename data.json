@@ -1,45 +1,51 @@
 [
     {"name": "Mathematics",
      "teacher":"Mr. Regele",
+     "preview":"Math class is all about problem solving.",
      "readmore":[
-         {"p":"Math class is all about problem solving."},
          {"p":"Though we learn enough math to bridge the gap between Algebra II and calculus, the class mainly focuses on the students finding and presenting solutions to problems in many fields of math."}
      ]
     },
     {"name": "Humanities",
      "teacher":"Mr. Ludt",
+     "preview":"Humanities is History and English class combined into a big discussion thing.",
      "readmore":[
-         {"p":"Humanities is History and English class combined into a big discussion thing. Every week we write a journal discussing the past week, a grammar error in the wild, and 20 new vocab words we've learned."}
+         {"p":"Every week we write a journal discussing the past week, a grammar error in the wild, and 20 new vocab words we've learned."}
      ]
     },
     {"name": "Physics",
      "teacher":"Mr. Ellis",
+     "preview":"Physics class is a combination of note taking and doing problem sets. ",
      "readmore":[
          {"p":"Physics class is a combination of note taking and doing problem sets. It's considered advanced physics, but does not exactly follow any AP curriculum."}
      ]
     },
     {"name": "STEM",
      "teacher":"Ms. Borowski",
+     "preview":"STEM is a class focused on the two biggest projects of the year, STEM I and STEM II.",
      "readmore":[
-         {"p":"STEM is a class focused on the two biggest projects of the year, STEM I and STEM II."}
+         {"p":"STEM I kicks off the school year, and culminates at Science Fair in February. Select Mass Academy students move on to the regional fair where they compete for spots in the international and state level fairs."}
      ]
     },
     {"name": "Scientific and Technical Writing",
      "teacher":"Ms. Borowski",
+     "preview":"Scientific and Technical Writing, abbreviated STW and affectionately called \"STW,\" is a chill class.",
      "readmore":[
-         {"p":"STW, like STEM, is also taught by Ms. Borowski, and so far, no one can tell the difference between the two classes, though Mr. Connell does show up during STEM."}
+         {"p":"STW consists of learning grammar, examining science writing, and competing in contests."}
      ]
     },
     {"name": "French",
      "teacher":"Ms. Wildfong",
+     "preview":"French is taught immersion style.",
      "readmore":[
-         {"p":"French is taught immersion style. We learn grammar and read stories. We learn new vocabulary by defining and recording any new words we encounter."}
+         {"p":"French must be spoken at all times in class. Sometimes, we play monopoly and watch movies. We learn new vocabulary by defining and recording any new words we encounter daily, and we record ourselves reading passages to improve our pronunciation."}
      ]
     },
     {"name": "Computer Science",
      "teacher":"Ms. Taricco",
+     "preview":"This is a website for CS at Mass Academy.",
      "readmore":[
-         {"p":"This is a website for CS at Mass Academy."}
+         {"p":"Copmuter Science teaches the basics of programming using Java, and ends with the Apps for Good project D term."}
      ]
     }
 ]

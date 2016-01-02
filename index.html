@@ -23,7 +23,7 @@
     <link rel="import" href="bower_components/paper-styles/color.html">
     <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
     <link rel="import" href="bower_components/page-title/page-title.html">
-    
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
         
     </head>
     
@@ -48,6 +48,9 @@
             margin: 5px;
             width: 100%;
         }
+        .preview{
+            margin-bottom: 0;
+        }
         .card-content .title{
             @apply(--paper-font-headline);
         }
@@ -62,8 +65,14 @@
         #personal-container paper-card {
             --paper-card-header-color: var(--paper-pink-500);
         }
+        paper-button{
+            color: var(--paper-pink-500);
+        }
         .chinese{
-            font: 'SimHei', sans-serif;
+            font-family: 宋体, sans-serif;
+        }
+        .spacer{
+            @apply(--layout-flex); 
         }
     </style>
     
@@ -103,24 +112,30 @@
 Connect, rotate, and leap-frog logs to get to the green circle.
 Moving a log next to another log allows you to move any connected log.
 Includes 40 unique levels that increase in challenge; many will leave you stumped!</p>
-                            <a href="https://play.google.com/store/apps/details?id=com.gmail.dajinchu.logfrog">
-                                <img alt="Get it on Google Play"
-       			src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-                            </a>
+                        </div>
+                        <div class="card-actions layout horizontal">
+                                <div class="spacer"></div>
+                                <paper-button onclick="goLink('https://play.google.com/store/apps/details?id=com.gmail.dajinchu.logfrog')">Get Log Frog on Google Play</paper-button>
                         </div>
                     </paper-card>
                     
                     <paper-card heading="Bedford High School" elevation="2" image="images/bhsbuilding.jpg">
                         <div class="card-content">
                             <p>BHS is a small public high school with around 200 people per grade. Students mostly come from the town of Bedford, but some also come from Hanscom Air Force Base or from Boston through the METCO system. Bedford is well-known for its social studies program, and has done very well on history fair in the past.</p>
-                            <a href="http://bedford.k12.ma.us/home/bedford-high-school.html">BHS website</a>
-                            <br>
+                        </div>
+                        <div class="card-actions layout horizontal">
+                                <div class="spacer"></div>
+                                <paper-button onclick="goLink('http://bedford.k12.ma.us/home/bedford-high-school.html')">Visit the BHS Website</paper-button>
                         </div>
                     </paper-card>
                     
                     <paper-card heading="Destination Imagination" elevation="2" image="images/newspaper.jpg">
                         <div class="card-content">
-                            <p><a href = "http://www.destinationimagination.org/">Destination Imagination</a> taught me, to name a few, teamwork, STEM principles, creativity, project management, and critical thinking by solving and presenting solutions to an open-ended challenge. Solutions included presenting a story and building a small structure to hold weight. My team won the regional and state level tournaments and represented Massachusetts at Global Finals seven times, placing top ten six times, including first and third place. It has changed me tremendously, and I would not be who I am today, had I not signed up in third grade.</p>
+                            <p>Destination Imagination taught me, to name a few, teamwork, STEM principles, creativity, project management, and critical thinking by solving and presenting solutions to an open-ended challenge. Solutions included presenting a story and building a small structure to hold weight. My team won the regional and state level tournaments and represented Massachusetts at Global Finals seven times, placing top ten six times, including first and third place. It has changed me tremendously, and I would not be who I am today, had I not signed up in third grade.</p>
+                        </div>
+                        <div class="card-actions layout horizontal">
+                                <div class="spacer"></div>
+                                <paper-button onclick="goLink('http://www.destinationimagination.org/what-we-do/challenge-program')">Learn more</paper-button>
                         </div>
                     </paper-card>
                 </div>
@@ -130,10 +145,12 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
                     <template is="dom-repeat" items="{{data}}" as="course">
                         <paper-card onclick="toggle(this)">
                             <div class="card-content">
-                                <div class="layout horizontal center justified">
+                                <div class="layout horizontal center">
                                     <div class="title">{{course.name}} ({{course.teacher}})</div>
+                                    <div class="spacer"></div>
                                     <iron-icon class="more-less-icon" icon="icons:expand-more"></iron-icon>
                                 </div>
+                                <p class="preview">{{course.preview}}</p>
                                 <iron-collapse class="readmore">
                                     <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
                                         <p>{{readmore.p}}</p>
@@ -167,7 +184,9 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
                   icon.setAttribute("icon","icons:expand-more");
               }
           }
-          
+          function goLink(link){
+              window.location.href = link;
+          }
       </script>
     </body>
 </html>
