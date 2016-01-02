@@ -19,8 +19,8 @@
     <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
-    <link rel="import" href="bower_components/paper-styles/shadow.html">
     <link rel="import" href="bower_components/paper-styles/typography.html">
+    <link rel="import" href="bower_components/paper-styles/color.html">
     <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
     <link rel="import" href="bower_components/page-title/page-title.html">
     
@@ -31,8 +31,12 @@
         html, body {
             font-family: 'Roboto', 'Noto', sans-serif;
         }
+        paper-tabs{
+            --paper-tabs-selection-bar-color: var(--paper-pink-200);
+        }
         paper-tab{
             @apply(--paper-font-body1);
+            --paper-tab-ink: var(--paper-pink-200);
         }
         .cards{
             padding: 5px;
@@ -47,6 +51,18 @@
         .card-content .title{
             @apply(--paper-font-headline);
         }
+        paper-toolbar.tall .title div{
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+        paper-toolbar .title div{
+            transition: opacity 0.2s linear;
+            opacity: 0;
+        }
+        
+        #personal-container paper-card {
+            --paper-card-header-color: var(--paper-pink-500);
+        }
     </style>
     
     <body class="fullbleed vertical layout">
@@ -55,22 +71,47 @@
         <page-title base-title="Da-Jin Chu"
                     title="[[selectedItem.innerHTML]]"></page-title>
           
-        <paper-header-panel mode="standard">
-            <paper-toolbar class="medium-tall">
+        <paper-header-panel mode="waterfall-tall">
+            <paper-toolbar>
                 <iron-pages class="top title" selected=[[selected]] selected-item="{{selectedItem}}">
                     <div>Personal</div>
                     <div>Portfolio</div>
                 </iron-pages>
-                <paper-tabs class="bottom fit" selected={{selected}} style="width: 300px;">
+                <paper-tabs class="bottom fit" selected={{selected}} style="height: 100%; width: 300px;">
                     <paper-tab>Personal</paper-tab>
                     <paper-tab>Portfolio</paper-tab>
                 </paper-tabs>
             </paper-toolbar>
             
             <iron-pages selected=[[selected]]>
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                <div class="layout vertical center cards" id="personal-container">
+                    <paper-card heading="Log Frog" elevation="2" image="images/logfrogicon.png">
+                        <div class="card-content">
+                            <p>Log Frog began spring of 2015 at <a href="https://codeday.org/boston">CodeDay</a>, a 24-hour coding marathon for students. I continued to work on it over the summer before junior year, and published it that August.</p>
+                            <p>Log frog is a simple abstract puzzle game.
+Connect, rotate, and leap-frog logs to get to the green circle.
+Moving a log next to another log allows you to move any connected log.
+Includes 40 unique levels that increase in challenge; many will leave you stumped!</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.gmail.dajinchu.logfrog">
+                                <img alt="Get it on Google Play"
+       			src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
+                            </a>
+                        </div>
+                    </paper-card>
+                    
+                    <paper-card heading="Bedford High School" elevation="2" image="images/bhsbuilding.jpg">
+                        <div class="card-content">
+                            <p>BHS is a small public high school with around 200 people per grade. Students mostly come from the town of Bedford, but some also come from Hanscom Air Force Base or from Boston through the METCO system. Bedford is well-known for its social studies program, and has done very well on history fair in the past.</p>
+                            <a href="http://bedford.k12.ma.us/home/bedford-high-school.html">BHS website</a>
+                            <br>
+                        </div>
+                    </paper-card>
+                    
+                    <paper-card heading="Destination Imagination" elevation="2" image="images/newspaper.jpg">
+                        <div class="card-content">
+                            <p><a href = "http://www.destinationimagination.org/">Destination Imagination</a> taught me, to name a few, teamwork, STEM principles, creativity, project management, and critical thinking by solving and presenting solutions to an open-ended challenge. Solutions included presenting a story and building a small structure to hold weight. My team won the regional and state level tournaments and represented Massachusetts at Global Finals seven times, placing top ten six times, including first and third place. It has changed me tremendously, and I would not be who I am today, had I not signed up in third grade.</p>
+                        </div>
+                    </paper-card>
                 </div>
                 <div class="layout vertical center cards">
                     <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>
@@ -92,7 +133,7 @@
                     </template>
                 </div>
             </iron-pages>
-        </paper-header-panel>
+          </paper-header-panel>
           
         
       </template>
@@ -103,7 +144,7 @@
           // wait for WebComponentsReady. 
           document.addEventListener('WebComponentsReady', function() {
               var header = document.querySelector("template#header");
-              header.selected = 1;
+              header.selected = 0;
           });
           function toggle(e){
               var readmore = e.getElementsByClassName("readmore")[0];
