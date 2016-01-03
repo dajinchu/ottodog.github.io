@@ -36,7 +36,6 @@
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
         ga('create', 'UA-46986118-3', 'auto');
-        ga('send', 'pageview');
     </script>
     
     <style is="custom-style">
@@ -206,6 +205,8 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
               }else{
                   header.selected = 0;
               }
+              updateHash();
+
           });
           function toggle(e){
               var readmore = e.getElementsByClassName("readmore")[0];
@@ -225,6 +226,10 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
           }
           function updateHash(){
               window.location.hash = header.selectedItem.innerHTML;
+              ga('send', 'pageview',{
+                  'title': location.hash,
+                  'page': location.pathname + location.search  + location.hash
+              });
           }
       </script>
     </body>
