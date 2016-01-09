@@ -6,7 +6,7 @@
     </script>
         
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-
+    <meta charset="UTF-8">
 
     <!-- 2. Use an HTML Import to bring in some elements. -->
         
@@ -25,8 +25,8 @@
     <link rel="import" href="bower_components/page-title/page-title.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">    
+    <link rel="import" href="portfolio-card.html">
         
-    </head>
     
     <!--Google Analytics Script-->
     <script>
@@ -38,6 +38,7 @@
         ga('create', 'UA-46986118-3', 'auto');
     </script>
     
+    <!-- Styling -->
     <style is="custom-style">
         html, body {
             font-family: 'Roboto', 'Noto', sans-serif;
@@ -96,7 +97,9 @@
             --paper-icon-button-ink-color: white;
         }
     </style>
-    
+
+    </head>
+
     <body class="fullbleed vertical layout">
         
       <!-- 3. Declare the element. Configure using its attributes. -->
@@ -123,7 +126,9 @@
             
             <iron-pages selected=[[selected]]>
                 <div class="layout vertical center cards" id="personal-container">
-                    
+                    <object data="files/illiad.pdf" type="application/pdf" width="100%" height="100%">
+  <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+</object>
                     <paper-card heading="Da-Jin Chu" elevation="2">
                         <div class="card-content">
                         <p>My real Chinese name is <span class="chinese">朱大靖</span>, which is pronounced zhu da jing, hence my official English name. I was born in Winchester, and my parents came to this country in 1999. They're both native chinese speakers, but have been permanent residents for over a decade, and got their American citizenships a few years ago.</p>
@@ -165,25 +170,13 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
                         </div>
                     </paper-card>
                 </div>
+                
+                <!--Portfolio Page-->
                 <div class="layout vertical center cards">
                     <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>
                     
                     <template is="dom-repeat" items="{{data}}" as="course">
-                        <paper-card onclick="toggle(this)">
-                            <div class="card-content">
-                                <div class="layout horizontal center">
-                                    <div class="title">{{course.name}} ({{course.teacher}})</div>
-                                    <div class="spacer"></div>
-                                    <iron-icon class="more-less-icon" icon="icons:expand-more"></iron-icon>
-                                </div>
-                                <p class="preview">{{course.preview}}</p>
-                                <iron-collapse class="readmore">
-                                    <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
-                                        <p>{{readmore.p}}</p>
-                                    </template>
-                                </iron-collapse>
-                            </div>
-                        </paper-card>
+                        <portfolio-card course="{{course}}"></portfolio-card>
                     </template>
                 </div>
             </iron-pages>
@@ -206,18 +199,8 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
                   header.selected = 0;
               }
               updateHash();
-
           });
-          function toggle(e){
-              var readmore = e.getElementsByClassName("readmore")[0];
-              var icon = e.getElementsByClassName("more-less-icon")[0];
-              readmore.toggle();
-              if(readmore.opened){
-                  icon.setAttribute("icon","icons:expand-less");
-              }else{
-                  icon.setAttribute("icon","icons:expand-more");
-              }
-          }
+          
           function goLink(link){
               window.location.href = link;
           }
@@ -228,7 +211,7 @@ Includes 40 unique levels that increase in challenge; many will leave you stumpe
               window.location.hash = header.selectedItem.innerHTML;
               ga('send', 'pageview',{
                   'title': location.hash,
-                  'page': location.pathname + location.search  + location.hash
+                  'page': location.hash
               });
           }
       </script>
