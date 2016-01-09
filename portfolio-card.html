@@ -21,33 +21,35 @@
             paper-button{
                 color: var(--paper-pink-500);
                 --paper-button-ink-color: var(--paper-pink-200);
+                margin-bottom: 2px;
             }
             .card-content .title{
                 @apply(--paper-font-headline);
             }
-            iron-icon{
-                padding:5px;
+            .preview{
+                margin-top: 4px;
+                margin-bottom: 0;
+                font-style: italic;
             }
         </style>
         <paper-card on-click="open">
             <div class="card-content">
-                <div class="layout horizontal center" on-click="toggle">
+                <div on-click="toggle">
+                <div class="layout horizontal center">
                     <div class="title">{{course.name}} ({{course.teacher}})</div>
                     <div class="spacer"></div>
                     <iron-icon id="moreLessIcon" icon="icons:expand-more"></iron-icon>
                 </div>
                 <p class="preview">{{course.preview}}</p>
+                </div>
                 <iron-collapse id="readmore">
                     <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
                         <p>{{readmore.p}}</p>
                     </template>
-                </iron-collapse>
-            </div>
-            <div class="card-actions layout horizontal">
-                <div class="spacer"></div>
-                <template is="dom-repeat" items="{{course.files}}" as="file">
-                    <paper-button on-click="openFile">{{file.name}}</paper-button>
+                    <template is="dom-repeat" items="{{course.files}}" as="file">
+                    <paper-button raised on-click="openFile">{{file.name}}</paper-button>
                 </template>
+                </iron-collapse>
             </div>
         </paper-card>
     </template>
