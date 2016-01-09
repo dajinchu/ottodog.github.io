@@ -3,49 +3,85 @@
      "teacher":"Mr. Regele",
      "preview":"Math class is all about problem solving.",
      "readmore":[
-         {"p":"Though we learn enough math to bridge the gap between Algebra II and calculus, the class mainly focuses on the students finding and presenting solutions to problems in many fields of math."}
+         {"p":"Though we learn enough math to bridge the gap between Algebra II and calculus, the class mainly focuses on the students finding and presenting solutions to problems in many fields of math. The beginning of the year focuses on modeling complex math problems, often with ones without a singular correct answer. We transition to smaller daily math problems from a packet, learning by solving problems rather than being taught directly."},
+         {"p":"HiMCM is a math competition we do in October. The problem is released at 4am, and is due 4pm the next day, giving contestants 36 hours to solve it. It is always based on math modeling, and because it is abstract enough to lack a right answer, it is judged on how thorough and well justified answers are. Answers come in the form of papers describing the group's strategy, methodology, and results. This year the problem was about crime and evaulating the safety of a city given police report data."},
+         {"p":"The gas station problem was an in class practice for the HiMCM. The prompt was to present a method of finding the best gas station to go to."}
+     ],
+     "files":[
+         {"url":"himcm.pdf","name":"HiMCM Paper"},
+         {"url":"gas.pdf","name":"Gas Station Problem"}
      ]
     },
     {"name": "Humanities",
      "teacher":"Mr. Ludt",
-     "preview":"Humanities is History and English class combined into a big discussion thing.",
+     "preview":"Humanities is History and English class combined.",
      "readmore":[
-         {"p":"Every week we write a journal discussing the past week, a grammar error in the wild, and 20 new vocab words we've learned."}
+         {"p":"We have two major essays every term, and a journal entry every week, in which we describe the past week, correct a grammar error, and record 20 new vocab words we've picked up. In class, we start from the ancient world and work forward, looking at history via literature."},
+         {"p":"The third essay I wrote was about free will and fate in the works 'Women of Troy' and the 'Illiad.' Instead of dealing directly with the dichotomy of free will and fate, I chose to examine how they impact the characters in the two works."},
+         {"p":"I wrote my fourth essay about Jonathan Swift's use of organization and topic development in his satirical essay 'A Modest Proposal.'"}
+     ],
+     "files":[
+         {"url":"illiad.pdf","name":"Third Essay"},
+         {"url":"essay4.pdf","name":"Fourth Essay"}
      ]
     },
     {"name": "Physics",
      "teacher":"Mr. Ellis",
-     "preview":"Physics class is a combination of note taking and doing problem sets. ",
+     "preview":"Physics class is a combination of note taking and doing problem sets.",
      "readmore":[
-         {"p":"Physics class is a combination of note taking and doing problem sets. It's considered advanced physics, but does not exactly follow any AP curriculum."}
+         {"p":"We cover every subject in the Physics SAT subject test, and there are additional calculus options. Notes are filled out in class and for homework, and time is split between lectures, labs, demonstrations, and exercises."},
+         {"p":"Once a unit, we do a massive problem combining many of the concepts we just learned. For some, we write detailed reports on how we solved them."},
+         {"p":"We also do labs. In preparation for science fair, we did the energy lab and reported the paper in a format suitable to be printed and pasted to a trifold board."}
+     ],
+     "files":[
+         {"url":"uber2.pdf","name":"Uber Problem"},
+         {"url":"board.pdf","name":"Lab board"}
      ]
     },
     {"name": "STEM",
      "teacher":"Ms. Borowski",
      "preview":"STEM is a class focused on the two biggest projects of the year, STEM I and STEM II.",
      "readmore":[
-         {"p":"STEM I kicks off the school year, and culminates at Science Fair in February. Select Mass Academy students move on to the regional fair where they compete for spots in the international and state level fairs."}
+         {"p":"STEM I kicks off the school year, and culminates at Science Fair in February. Select Mass Academy students move on to the regional fair where they compete for spots in the international and state level fairs."},
+         {"p":"In addition to presenting to judges, we also each write a paper for our projects. The first portion of the paper is the literature review, where we summarize the research we did for the project and bring readers up to speed so that they can understand the rest of the paper"},
+         {"p":"In December, Mass Academy holds a practice science fair, where students present their progress to faculty and other students. It is a good chance to get feedback and an understanding of how far a project has gotten, as well as practice presenting the project with a board. My board for december fair was made by printing and taping paper to a black trifold."}
+     ],
+     "files":[
+         {"url":"lit.pdf","name":"Lit Review"},
+         {"url":"dboard.pdf","name":"December Fair Board"}
      ]
     },
     {"name": "Scientific and Technical Writing",
      "teacher":"Ms. Borowski",
-     "preview":"Scientific and Technical Writing, abbreviated STW and affectionately called \"STW,\" is a chill class.",
+     "preview":"Scientific and Technical Writing, abbreviated STW and affectionately called \"stew,\" is a chill class.",
      "readmore":[
-         {"p":"STW consists of learning grammar, examining science writing, and competing in contests."}
+         {"p":"STW consists of learning grammar, examining science writing, and competing in contests."},
+         {"p":"We competed in MIT's Society of Women Engineer's essay contest. The prompt was to write about how we can inspire the younger generation to enter STEM fields. I got an honorable mention."},
+         {"p":"To prepare for the STEM methodology section, we designed and tested some kid's science experiments, and wrote detailed methodologies for them. In addition, we wrote kid-friendly versions. I did mine on center of gravity, using pencils to help balance a wheel on a string."}
+     ],
+     "files":[
+         {"url":"mit.pdf","name":"MIT Essay"},
+         {"url":"kids.pdf","name":"Kids's Experiment"}
      ]
     },
     {"name": "French",
      "teacher":"Ms. Wildfong",
-     "preview":"French is taught immersion style.",
+     "preview":"French is taught by immersion.",
      "readmore":[
-         {"p":"French must be spoken at all times in class. Sometimes, we play monopoly and watch movies. We learn new vocabulary by defining and recording any new words we encounter daily, and we record ourselves reading passages to improve our pronunciation."}
+         {"p":"French must be spoken at all times in class. Sometimes, we play monopoly and watch movies. We learn new vocabulary by defining and recording any new words we encounter daily, and we record ourselves reading passages to improve our pronunciation."},
+         {"p":"We wrote fairy tales for French. I wrote one about two monsters living in a mountain with some villagers. One monster wants to become friends with the villagers, and they decide to stage a battle where the second monster tries to destroy the village, only to be defeated by the first. It works, and he becomes good friends with the villagers, who are very grateful. The second monster, however, has to leave his friend behind to avoid their scheme being discovered."},
+         {"p":"We need to record new vocabulary every day, and compile them at the end of the term. Below is my list from B term."}
+     ],
+     "files":[
+         {"url":"conte.pdf","name":"Fairy Tale"},
+         {"url":"bvocab.pdf","name":"Vocab List"}
      ]
     },
     {"name": "Computer Science",
      "teacher":"Ms. Taricco",
      "preview":"This is a website for CS at Mass Academy.",
      "readmore":[
-         {"p":"Copmuter Science teaches the basics of programming using Java, and ends with the Apps for Good project D term."}
+         {"p":"Computer Science teaches the basics of programming using Java, and ends with the Apps for Good project D term."}
      ]
     }
 ]
