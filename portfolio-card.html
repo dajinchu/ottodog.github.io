@@ -3,6 +3,9 @@
 <link rel="import" href="bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
 <link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="bower_components/neon-animation/animations/scale-up-animation.html">
+<link rel="import" href="bower_components/neon-animation/animations/fade-out-animation.html">
 
 <dom-module id="portfolio-card">
     <template>
@@ -21,7 +24,6 @@
             paper-button{
                 color: var(--paper-pink-500);
                 --paper-button-ink-color: var(--paper-pink-200);
-                margin-bottom: 2px;
             }
             .card-content .title{
                 @apply(--paper-font-headline);
@@ -30,6 +32,17 @@
                 margin-top: 4px;
                 margin-bottom: 0;
                 font-style: italic;
+            }
+            paper-dialog{
+                width:100%;
+                height:100%;
+                padding:0;
+            }
+            .pdf{
+                margin:0;
+                padding:0;
+                width:100%;
+                height:100%;
             }
         </style>
         <paper-card on-click="open">
@@ -46,9 +59,18 @@
                     <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
                         <p>{{readmore.p}}</p>
                     </template>
+                    <!-- Buttons -->
+                    <div class="layout horizontal center">
                     <template is="dom-repeat" items="{{course.files}}" as="file">
-                    <paper-button raised on-click="openFile">{{file.name}}</paper-button>
-                </template>
+                        <paper-button on-click="openFile">{{file.name}}</paper-button>
+                        <paper-dialog id="filedialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
+                            <object class="pdf" data="files/{{file.url}}" type="application/pdf">
+                                <p>Your browser does not support embedding pdf's.</p>
+                                <a href="files/{{file.url}}" target="_blank">View {{file.name}} in a new tab</a>
+                            </object>
+                        </paper-dialog>
+                    </template>
+                    </div>
                 </iron-collapse>
             </div>
         </paper-card>
@@ -83,7 +105,7 @@
             e.stopPropagation();
         },
         openFile: function(e){
-            window.location.href = "files/" + e.model.file.url;
+            Polymer.dom(this.root).querySelector("#filedialog").open();
         }
     });
 </script>
