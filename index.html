@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <meta charset="UTF-8">
 
+
     <!-- 2. Use an HTML Import to bring in some elements. -->
-        
     <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
     <link rel="import" href="bower_components/iron-pages/iron-pages.html">
@@ -41,9 +41,10 @@
     <!-- Styling -->
     <style is="custom-style">
         :root{
-            --primary: var(--paper-green-500);
-            --accent: var(--paper-light-blue-100);
+            --primary: var(--paper-green-700);
             --primary-light: var(--paper-light-green-300);
+            --accent: var(--paper-orange-400);
+            --accent-light: var(--paper-orange-100);
         }
         html, body {
             font-family: 'Roboto', 'Noto', sans-serif;
@@ -63,11 +64,17 @@
         }
         
         paper-tabs{
-            --paper-tabs-selection-bar-color: var(--accent);
+            --paper-tabs-selection-bar-color: var(--accent-light);
         }
         paper-tab{
             @apply(--paper-font-body1);
-            --paper-tab-ink: var(--accent);
+            --paper-tab-ink: var(--accent-light);
+            --paper-tab-content:{
+                color:var(--accent-light);
+            }
+            --paper-tab-content-unselected:{
+                color:#FFFFFF;
+            }
         }
         .cards{
             padding: 5px;
@@ -79,11 +86,17 @@
             margin: 5px;
             width: 100%;
         }
-        .card-content .title{
-            @apply(--paper-font-headline);
-        }
         #personal-container paper-card {
             --paper-card-header-color: var(--primary-light);
+            --paper-card-header-image:{
+                max-height:400px;
+            }
+            --paper-card-header-image-text:{
+                opacity: var(--dark-primary-opacity);
+                width:100%;
+                background: rgba(0,0,0,0.7);
+                margin-bottom: 3px;
+            }
         }
         paper-button{
             color: var(--primary);
@@ -97,6 +110,13 @@
         }
         paper-icon-button {
             --paper-icon-button-ink-color: white;
+        }
+        portfolio-card{
+            --button-color: var(--primary);
+            --button-ink-color: var(--primary-light);
+        }
+        p a{
+            color:var(--accent);
         }
     </style>
 
@@ -120,7 +140,7 @@
                 <paper-icon-button onclick="goLink('mailto:dajinchu@gmail.com')" icon="mail" title="email" alt="email"></paper-icon-button>
                 <paper-icon-button onclick="goLink('https://plus.google.com/+DaJinChu')" src="images/white%20gplus.png" title="G+" alt="google plus"></paper-icon-button>
                 <paper-icon-button onclick="goLink('https://github.com/ottodog')" src="images/GitHub-Mark-Light-64px.png" title="GitHub" alt="GitHub"></paper-icon-button>
-                <paper-tabs noink onclick="scrollUp(); updateHash()" class="bottom fit" selected={{selected}} style="height: 100%; width: 300px;">
+                <paper-tabs onclick="scrollUp(); updateHash()" class="bottom fit" selected={{selected}} style="height: 100%; width: 300px;">
                     <paper-tab>Personal</paper-tab>
                     <paper-tab>Portfolio</paper-tab>
                 </paper-tabs>

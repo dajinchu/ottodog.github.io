@@ -22,10 +22,11 @@
                 @apply(--layout-flex); 
             }
             paper-button{
-                color: var(--paper-pink-500);
-                --paper-button-ink-color: var(--paper-pink-200);
+                color: var(--button-color, black);
+                --paper-button-ink-color: var(--button-ink-color, black);
             }
             .card-content .title{
+                color: var(--header-color, black);
                 @apply(--paper-font-headline);
             }
             .preview{
