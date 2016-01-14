@@ -76,6 +76,9 @@
                 color:#FFFFFF;
             }
         }
+        .content-container{
+            background-color: var(--paper-grey-100);
+        }
         .cards{
             padding: 5px;
             max-width: 800px;
@@ -146,7 +149,7 @@
                 </paper-tabs>
             </paper-toolbar>
             
-            <iron-pages selected=[[selected]]>
+            <iron-pages class="content-container" selected=[[selected]]>
                 <div class="layout vertical center cards" id="personal-container">
                     <paper-card heading="Da-Jin Chu" elevation="2">
                         <div class="card-content">
