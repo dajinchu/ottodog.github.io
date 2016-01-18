@@ -81,7 +81,13 @@
      "teacher":"Ms. Taricco",
      "preview":"This is a website for CS at Mass Academy.",
      "readmore":[
-         {"p":"Computer Science teaches the basics of programming using Java, and ends with the Apps for Good project D term."}
+         {"p":"Computer Science teaches the basics of programming. It kicks off with HTML and CSS by having students create their own websites from scratch. Then, the class moves to learning programming with Java, and ends with the Apps for Good project C and D term, where student groups create mobile and web apps for good purposes."},
+         {"p":"I had already learned to program before this class, so after the website project, I, along with a few other students were allowed to pursue our own independent projects. I created a program to publish Mass Academy's weekly schedule as an ics file, which is the standard calendar format used by services such as Google Calendar, Apple iCalendar, Microsoft Outlook."},
+         {"p":"During a test, we were supposed to create a 'Latin Square,' which is a n × n array filled with n different symbols, each occurring exactly once in each row and exactly once in each column."}
+     ],
+     "files":[
+         {"url":"latinsquare.pdf","name":"Latin Square"},
+         {"url":"csproject.pdf","name":"Scheduler"}
      ]
     }
 ]

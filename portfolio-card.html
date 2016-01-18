@@ -49,12 +49,12 @@
         <paper-card on-click="open">
             <div class="card-content">
                 <div on-click="toggle">
-                <div class="layout horizontal center">
-                    <div class="title">{{course.name}} ({{course.teacher}})</div>
-                    <div class="spacer"></div>
-                    <iron-icon id="moreLessIcon" icon="icons:expand-more"></iron-icon>
-                </div>
-                <p class="preview">{{course.preview}}</p>
+                    <div class="layout horizontal center">
+                        <div class="title">{{course.name}} ({{course.teacher}})</div>
+                        <div class="spacer"></div>
+                        <iron-icon id="moreLessIcon" icon="icons:expand-more"></iron-icon>
+                    </div>
+                    <p class="preview">{{course.preview}}</p>
                 </div>
                 <iron-collapse id="readmore">
                     <template is="dom-repeat" items="{{course.readmore}}" as="readmore">
@@ -63,13 +63,15 @@
                     <!-- Buttons -->
                     <div class="layout horizontal center">
                     <template is="dom-repeat" items="{{course.files}}" as="file">
+                        <div>
                         <paper-button on-click="openFile">{{file.name}}</paper-button>
                         <paper-dialog id="filedialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
-                            <object class="pdf" data="files/{{file.url}}" type="application/pdf">
+                            <object class="pdf" data$="files/{{file.url}}" type="application/pdf">
                                 <p>Your browser does not support embedding pdf's.</p>
                                 <a href="files/{{file.url}}" target="_blank">View {{file.name}} in a new tab</a>
                             </object>
                         </paper-dialog>
+                        </div>
                     </template>
                     </div>
                 </iron-collapse>
@@ -106,7 +108,7 @@
             e.stopPropagation();
         },
         openFile: function(e){
-            Polymer.dom(this.root).querySelector("#filedialog").open();
+            e.target.parentElement.querySelector("#filedialog").open();
         }
     });
 </script>
