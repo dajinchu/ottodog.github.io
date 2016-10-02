@@ -39,6 +39,8 @@
 
                 <h2>Subscribe with ical link</h2>
                 <a class="ical" id="xyz_ical"></a>
+
+                <h2>Subscribe though Google Calendar</h2>
                 <a id="gcal">
                     <img src="images/schedules/calendar-icon.png">
                 </a>
@@ -79,7 +81,7 @@
                 document.querySelector("#xyz_ical").innerHTML = "https://calendar.google.com/calendar/ical/"+ids[xyz.selectedItem.name]+"%40group.calendar.google.com/public/basic.ics";
 
                 document.querySelector("#links").style.display = "flex";
-                document.querySelector("#links").href ="https://calendar.google.com/calendar/render?cid="+ids[section.selectedItem.name]+"@group.calendar.google.com&cid="+ids[xyz.selectedItem.name]+"@group.calendar.google.com&pli=1#identifier";
+                document.querySelector("#gcal").href ="https://calendar.google.com/calendar/render?cid="+ids[section.selectedItem.name]+"@group.calendar.google.com&cid="+ids[xyz.selectedItem.name]+"@group.calendar.google.com&pli=1#identifier";
             };
 
             section.addEventListener("paper-radio-group-changed", selection);
