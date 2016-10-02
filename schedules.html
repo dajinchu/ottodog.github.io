@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+        </script>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta charset="UTF-8">
+
+
+        <!-- 2. Use an HTML Import to bring in some elements. -->
+        <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+        <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+
+
+        <link rel="stylesheet" type="text/css" href="css/schedules.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+        <title>MAMS Schedules</title>
+    </head>
+
+    <body>
+        <paper-radio-group id="section">
+            <paper-radio-button name="A">A</paper-radio-button>
+            <paper-radio-button name="BA">B Advanced</paper-radio-button>
+            <paper-radio-button name="BI">B Intermediate</paper-radio-button>
+            <paper-radio-button name="C">C</paper-radio-button>
+        </paper-radio-group>
+
+        <paper-radio-group id="xyz" style="float:right;">
+            <paper-radio-button name="X">X</paper-radio-button>
+            <paper-radio-button name="Y">Y</paper-radio-button>
+            <paper-radio-button name="Z">Z</paper-radio-button>
+        </paper-radio-group>
+
+        <div id="outputs">
+            <div id='links'>
+                <h2>Subscribe with ical link</h2>
+                <a class="ical" id="section_ical"></a>
+
+                <h2>Subscribe with ical link</h2>
+                <a class="ical" id="xyz_ical"></a>
+                <a id="gcal">
+                    <img src="images/schedules/calendar-icon.png">
+                </a>
+            </div>
+            <div id='iframecontainer'>
+                <iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&title=MAMS%20Classes&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=h7c1hnari2dvsoodl0q3h6i9tc%40group.calendar.google.com&amp;color=%23125A12&amp;src=t8o77sks3c08t0ln0dm4godg0k%40group.calendar.google.com&amp;color=%23711616&amp;src=glgfp9ndr434sj3t8oq5ph3kc8%40group.calendar.google.com&amp;color=%23853104&amp;src=psjuqeh6tq2s8l3om8kmlkr408%40group.calendar.google.com&amp;color=%23182C57&amp;src=a6a3nb53hu08hhkuhbadbbrd3g%40group.calendar.google.com&amp;color=%23B1365F&amp;src=mbpgsqqiir532t2fd08b92d8k0%40group.calendar.google.com&amp;color=%2342104A&amp;src=5nkhe6ockg26girtrpu6forj9o%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FNew_York" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+        <script>
+
+            //DRY it up
+            var ids = {};
+            ids["A"] = "psjuqeh6tq2s8l3om8kmlkr408";
+            ids["BA"] = "t8o77sks3c08t0ln0dm4godg0k";
+            ids["BI"] = "glgfp9ndr434sj3t8oq5ph3kc8";
+            ids["C"] = "h7c1hnari2dvsoodl0q3h6i9tc";
+            ids["X"] = "a6a3nb53hu08hhkuhbadbbrd3g";
+            ids["Y"] = "mbpgsqqiir532t2fd08b92d8k0";
+            ids["Z"] = "5nkhe6ockg26girtrpu6forj9o";
+
+            var urls = {};
+            urls["A"] = "src=psjuqeh6tq2s8l3om8kmlkr408%40group.calendar.google.com&amp;color=%23182C57&amp;";
+            urls["BA"] = "src=t8o77sks3c08t0ln0dm4godg0k%40group.calendar.google.com&amp;color=%23711616&amp;";
+            urls["BI"] = "src=glgfp9ndr434sj3t8oq5ph3kc8%40group.calendar.google.com&amp;color=%23853104&amp;";
+            urls["C"] = "src=h7c1hnari2dvsoodl0q3h6i9tc%40group.calendar.google.com&amp;color=%23125A12&amp;";
+            urls["X"] = "src=a6a3nb53hu08hhkuhbadbbrd3g%40group.calendar.google.com&amp;color=%23B1365F&amp;";
+            urls["Y"] = "src=mbpgsqqiir532t2fd08b92d8k0%40group.calendar.google.com&amp;color=%2342104A&amp;";
+            urls["Z"] = "src=5nkhe6ockg26girtrpu6forj9o%40group.calendar.google.com&amp;color=%2323164E&amp;";
+
+            var section = document.querySelector("#section");
+            var xyz = document.querySelector("#xyz");
+
+            function selection (e) {
+                document.querySelector('#iframecontainer').innerHTML = '<iframe id="cal" src="https://calendar.google.com/calendar/embed?showTabs=0&amp;showCalendars=0&title=MAMS%20Classes&amp;showPrint=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;'+urls[section.selectedItem.name]+urls[xyz.selectedItem.name]+'ctz=America%2FNew_York;" style="border-width:0" frameborder="0" scrolling="no"></iframe>';
+
+                document.querySelector("#section_ical").innerHTML = "https://calendar.google.com/calendar/ical/"+ids[section.selectedItem.name]+"%40group.calendar.google.com/public/basic.ics";
+                document.querySelector("#xyz_ical").innerHTML = "https://calendar.google.com/calendar/ical/"+ids[xyz.selectedItem.name]+"%40group.calendar.google.com/public/basic.ics";
+
+                document.querySelector("#links").style.display = "flex";
+                document.querySelector("#links").href ="https://calendar.google.com/calendar/render?cid="+ids[section.selectedItem.name]+"@group.calendar.google.com&cid="+ids[xyz.selectedItem.name]+"@group.calendar.google.com&pli=1#identifier";
+            };
+
+            section.addEventListener("paper-radio-group-changed", selection);
+            xyz.addEventListener("paper-radio-group-changed", selection);
+        </script>
+    </body>
+</html>

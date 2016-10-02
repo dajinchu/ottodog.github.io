@@ -1,0 +1,46 @@
+html, body{ margin: 0; padding: 0; height:100%;}
+body, pre{
+	font-family: 'Open Sans', sans-serif;
+}
+paper-radio-group{
+    width:100%;
+}
+#outputs{
+    width: 100%;
+    height: 100%;
+}
+#links{
+    float:right;
+    width:25%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#links .ical {
+    width:80%;
+    font-size: .8em;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+#gcal{
+    max-width:50%;
+}
+#gcal > img{
+    width: 100%;
+}
+#iframecontainer{
+    float: left;
+    width:75%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
