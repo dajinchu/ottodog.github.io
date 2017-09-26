@@ -1,0 +1,55 @@
+body{
+    font-family:  'Roboto', sans-serif;
+    background-color: #eeeded;
+    margin: 0px;
+    padding: 0px;
+}
+.main-text{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.intro{
+    background-color: lightcyan;
+    padding: 20px;
+}
+h1, h2, h3, h5{
+    text-align: center;
+}
+
+.quote{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 0px;
+
+    font-style: italic;
+    color: dimgray;
+    font-size: 1.4em;
+}
+.quote-source{
+    padding-right: 20%;
+    margin-top: 0px;
+
+    color: dimgray;
+    text-align: right;
+}
+.overview{
+
+}
+.core{
+
+}
+.conclusion{
+
+}
+.vocab{
+    padding-bottom: 20px;
+    border-radius: 4px;
+}
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
